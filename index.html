@@ -128,7 +128,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0D1B2A}
 .pin-dot.filled{background:var(--amber);border-color:var(--amber)}
 .pin-dot.error{background:var(--sold);border-color:var(--sold)}
 .pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:240px}
-.pin-key{pointer-events:auto;position:relative;z-index:10001;
+.pin-key{
   height:64px;border-radius:12px;
   border:1px solid var(--bdr2);
   background:var(--navy2);
@@ -193,71 +193,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0D1B2A}
 .doc-link:hover{color:var(--amber)}
 .doc-share{background:var(--navy3);border:1px solid var(--bdr2);border-radius:5px;color:var(--muted);font-size:11px;padding:4px 9px;cursor:pointer;touch-action:manipulation;font-weight:600;flex-shrink:0}
 .doc-share:hover,.doc-share:active{background:var(--slate);color:var(--cream)}
-
-/* ── WARRANTY WORK ORDERS / LOCAL REPOSITORY ─────── */
-.wo-mini-list{margin-top:10px;border-top:1px solid var(--bdr);padding-top:8px}
-.wo-mini-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
-.wo-mini-head strong{font-size:12px;color:var(--amber2)}
-.wo-mini-head small{font-size:11px;color:var(--muted)}
-.wo-mini-item{border:1px solid var(--bdr);background:var(--navy3);border-radius:6px;padding:7px 8px;margin:5px 0;font-size:12px;line-height:1.35}
-.wo-mini-item strong{display:block;color:var(--cream);font-size:12px;margin-bottom:2px}
-.wo-mini-item small{display:block;color:var(--muted);font-size:11px}
-.wo-status-open{color:#4DD990}
-.wo-status-scheduled,.wo-status-in-progress{color:#7DB8F5}
-.wo-status-waiting-on-customer,.wo-status-waiting-on-trade{color:#F0B840}
-.wo-status-completed{color:#B6D7A8}
-.wo-status-archived{color:#999}
-.wo-modal{display:none;position:fixed;inset:0;z-index:9998;color:#202020;font-family:Arial,Helvetica,sans-serif}
-.wo-modal.is-open{display:block}
-.wo-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.62)}
-.wo-card{position:relative;margin:2vh auto;max-width:1120px;max-height:96vh;overflow:auto;background:#fff;border-radius:14px;box-shadow:0 18px 80px rgba(0,0,0,.55)}
-.wo-form{padding:20px}
-.wo-form-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;border-bottom:3px solid #8b1e1e;padding-bottom:12px;margin-bottom:14px}
-.wo-form-header h2{font-family:Arial,Helvetica,sans-serif;font-size:20px;margin:0;color:#202020}
-.wo-form-header p{font-size:12px;color:#666;margin:4px 0 0;line-height:1.4}
-.wo-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
-.wo-btn,.wo-primary,.wo-danger,.wo-muted-btn,.wo-import-label{border:1px solid #d6d6d6;background:#fff;color:#202020;border-radius:7px;padding:8px 10px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:5px}
-.wo-primary{background:#8b1e1e;border-color:#8b1e1e;color:#fff}
-.wo-danger{background:#fff0f0;border-color:#c88;color:#8b1e1e}
-.wo-muted-btn{background:#f4f4f4;color:#555}
-.wo-section{border:1px solid #d6d6d6;border-radius:12px;padding:12px;margin:12px 0;background:#fff}
-.wo-section h3{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:#8b1e1e}
-.wo-grid{display:grid;grid-template-columns:repeat(4,minmax(145px,1fr));gap:10px}
-.wo-field{display:flex;flex-direction:column;gap:4px}
-.wo-field-wide{grid-column:1 / -1}
-.wo-field span,.wo-trades legend{font-size:11px;color:#666;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
-.wo-field input,.wo-field select,.wo-field textarea{width:100%;border:1px solid #d6d6d6;border-radius:7px;padding:8px;font-size:13px;font-family:Arial,Helvetica,sans-serif;color:#202020;background:#fff}
-.wo-field textarea{min-height:56px;resize:vertical}
-.wo-trades{border:1px dashed #d6d6d6;border-radius:10px;margin-top:10px;padding:10px 12px 12px}
-.wo-check-grid{display:grid;grid-template-columns:repeat(5,minmax(115px,1fr));gap:7px;text-transform:capitalize;font-size:13px}
-.wo-check-grid label{display:flex;align-items:center;gap:6px}
-.wo-list-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:12px 0}
-.wo-list-tools input{border:1px solid #d6d6d6;border-radius:7px;padding:8px;min-width:220px;font-size:13px}
-.wo-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border:1px solid #d6d6d6;border-radius:10px;padding:10px 12px;margin:8px 0;background:#fff}
-.wo-row.archived{opacity:.65;background:#f3f3f3}
-.wo-row h4{margin:0 0 4px;font-size:14px;color:#202020}
-.wo-row p{margin:3px 0;color:#444;font-size:13px;line-height:1.35}
-.wo-row small{color:#777;font-size:11px}
-.wo-row-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;min-width:220px}
-.wo-repo-note{font-size:12px;color:#666;line-height:1.4;margin-top:4px}
-.wo-print-title{display:none}
-@media(max-width:900px){
-  .wo-card{margin:0;border-radius:0;max-height:100vh;height:100vh}
-  .wo-grid,.wo-check-grid{grid-template-columns:1fr}
-  .wo-form-header,.wo-row{flex-direction:column}
-  .wo-row-actions{min-width:0;justify-content:flex-start}
-}
-@media print{
-  body *{visibility:hidden!important}
-  .wo-modal.is-open,.wo-modal.is-open *{visibility:visible!important}
-  .wo-modal.is-open{position:absolute;inset:0;display:block!important;background:#fff!important;color:#000!important}
-  .wo-backdrop,.wo-actions,.wo-list-tools,[data-wo-close],[data-wo-print],[data-wo-save],[data-wo-archive],[data-wo-restore],[data-wo-edit],[data-wo-new],[data-wo-export],.wo-import-label{display:none!important}
-  .wo-card{margin:0!important;max-width:none!important;max-height:none!important;box-shadow:none!important;border-radius:0!important}
-  .wo-form{padding:0.25in!important}
-  .wo-section{break-inside:avoid}
-  .wo-print-title{display:block!important;margin:0 0 12px;font-size:12px;color:#444}
-}
-
 </style>
 </head>
 <body>
@@ -949,21 +884,69 @@ function RP(n) {
         <label>CC (optional, comma separated)</label>
         <input id="icc${n}" placeholder="e.g. charlie@schilling.com" style="touch-action:manipulation"/>
         <div class="af-row" style="margin-top:10px">
-          <button class="af-btn"  else if (CL==="warranty") {
-    const openCount = WO_byLot(n, false).length;
-    const totalCount = WO_byLot(n, true).length;
+          <button class="af-btn" onclick="TG('fi${n}')" style="touch-action:manipulation">Cancel</button>
+          <button class="af-btn pri" ontouchend="sendInspEmail(event,${n})" onclick="sendInspEmail(event,${n})" style="touch-action:manipulation">✉️ Email</button>
+          <button class="af-btn sms" ontouchend="sendInspSMS(${n})" onclick="sendInspSMS(${n})" style="touch-action:manipulation">💬 SMS</button>
+        </div>
+      </div>`;
+    acts = inspActF
+      + AF(`fs${n}`,"Message subcontractor",`<label>Subcontractor</label><input id="sn${n}" placeholder="e.g. ABC Plumbing"/><label>Message</label><textarea id="sm${n}" rows="2"></textarea>`,`FI('Draft message to '+V('sn${n}')+' for Lot ${n} at ${l.a}: '+V('sm${n}'))`);
+  }
+  else if (CL==="backoffice") {
+    const ds={sold:"Closed",const:"In progress",reserved:"Pending",avail:"—"}[l.st]||"—";
+    body=osec+`<div class="sec"><div class="sec-t">Deal status</div>
+      <div class="kv"><span>Status</span><span><span class="pill ${pc}">${sl}</span></span></div>
+      <div class="kv"><span>Deal</span><span>${ds}</span></div>
+      <div class="kv"><span>Permit</span><span>${l.pm}</span></div>
+      <div class="kv"><span>Phase</span><span>${l.ph}</span></div>
+      ${l.cl?`<div class="kv"><span>Close date</span><span>${l.cl}</span></div>`:""}
+      ${l.nt?`<div class="fnote">${l.nt}</div>`:""}
+    </div>`;
+    acts =
+      // ── Message Central ────────────────────────────
+      `<div class="sec-t" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:8px 0 6px;margin-bottom:2px;border-bottom:1px solid var(--bdr)">Message Central</div>`
+      + `<button class="ab" id="abtn-rw${n}" onclick="TG('rw${n}')">Request Waivers <span class="ab-ic">›</span></button>
+         <div class="af" id="rw${n}">
+           <label>Select waiver type</label>
+           <div class="af-row" style="margin:6px 0 4px">
+             <button class="af-btn pri" onclick="sendWaiverEmail(event,${n},'Partial')" ontouchend="sendWaiverEmail(event,${n},'Partial')" style="touch-action:manipulation">✉️ Partial</button>
+             <button class="af-btn pri" onclick="sendWaiverEmail(event,${n},'Final')" ontouchend="sendWaiverEmail(event,${n},'Final')" style="touch-action:manipulation">✉️ Final</button>
+           </div>
+           <button class="af-btn" onclick="TG('rw${n}')" style="touch-action:manipulation;margin-top:4px">Cancel</button>
+         </div>`
+      + `<button class="ab" id="abtn-pw${n}" onclick="TG('pw${n}')">Print Waivers <span class="ab-ic">›</span></button>
+         <div class="af" id="pw${n}">
+           <label>Select waiver type</label>
+           <div class="af-row" style="margin:6px 0 4px">
+             <button class="af-btn" onclick="printWaiver(${n},'Partial')" ontouchend="printWaiver(${n},'Partial')" style="touch-action:manipulation">🖨️ Partial</button>
+             <button class="af-btn" onclick="printWaiver(${n},'Final')" ontouchend="printWaiver(${n},'Final')" style="touch-action:manipulation">🖨️ Final</button>
+           </div>
+           <button class="af-btn" onclick="TG('pw${n}')" style="touch-action:manipulation;margin-top:4px">Cancel</button>
+         </div>`
+      + AB(`rb${n}`,"Request Bill ↗", `sendBillRequest(${n})`)
+      + `<div style="height:6px"></div>`
+      + AF(`fn${n}`,"Follow-up note",`<label>Note</label><textarea id="nt${n}" rows="3" placeholder="Action items..."></textarea>`,`alert('Note saved for Lot ${n}.')`,true)
+      + AB(`fcs${n}`,"Check permit status ↗",`FI('Check permit status with Town of Cedar Lake for Lot ${n} at ${l.a} Cedar Lake IN 46303')`);
+  }
+  else if (CL==="hoa") {
+    const mem = l.st==="sold"||l.st==="const";
+    body=osec+`<div class="sec"><div class="sec-t">HOA membership</div>
+      <div class="kv"><span>Address</span><span>${l.a}</span></div>
+      <div class="kv"><span>Status</span><span>${mem?"Active member":"Pre-sale"}</span></div>
+      <div class="kv"><span>Lot size</span><span>${l.sf.toLocaleString()} SF</span></div>
+    </div>`;
+    acts = AF(`ha${n}`,"Message all homeowners",`<label>Subject</label><input id="hs${n}" placeholder="e.g. Spring HOA Meeting"/><label>Message</label><textarea id="hm${n}" rows="3" placeholder="Dear Oak Brook homeowners..."></textarea>`,`FI('Draft HOA broadcast email to all Oak Brook homeowners Cedar Lake IN. Subject: '+V('hs${n}')+'. Message: '+V('hm${n}'))`)
+      + AF(`hv${n}`,"Message vendor",`<label>Vendor</label><select id="hvn${n}"><option>Redwood Landscaping</option><option>Other vendor</option></select><label>Message</label><textarea id="hvm${n}" rows="2"></textarea>`,`FI('Draft message to '+EL2('hvn${n}')+' from Oak Brook HOA: '+V('hvm${n}'))`)
+      + AF(`hsr${n}`,"Request for service",`<label>Service type</label><input id="hst${n}" placeholder="e.g. Landscaping, Snow removal..."/><label>Details</label><textarea id="hsd${n}" rows="2"></textarea>`,`FI('Draft HOA service request for Oak Brook Cedar Lake IN. Service: '+V('hst${n}')+'. Details: '+V('hsd${n}'))`);
+  }
+  else if (CL==="warranty") {
     body=osec+`<div class="sec"><div class="sec-t">Warranty info</div>
       <div class="kv"><span>Address</span><span>${l.a}</span></div>
       <div class="kv"><span>Home sqft</span><span>${l.hsf.toLocaleString()} SF</span></div>
       <div class="kv"><span>Foundation</span><span>${l.fo}</span></div>
       ${l.cl?`<div class="kv"><span>Close date</span><span>${l.cl}</span></div>`:""}
-      <div class="kv"><span>Work orders</span><span>${openCount} open / ${totalCount} total</span></div>
-    </div>
-    <div class="sec"><div class="sec-t">Local work orders</div>
-      <div class="wo-mini-list" id="wo-mini-list-${n}">${WO_inlineListHtml(n)}</div>
     </div>`;
-    acts = AB(`wo-new-${n}`,"Create Work Order",`WO_openFromLot(${n})`)
-      + AB(`wo-repo-${n}`,"Open Work Order Repository",`WO_openRepository(${n})`)
+    acts = AF(`wo${n}`,"Create work order",`<label>Issue / trade</label><input id="wi${n}" placeholder="e.g. HVAC, plumbing..."/><label>Description</label><textarea id="wd${n}" rows="2"></textarea><label>Priority</label><select id="wp${n}"><option>Normal</option><option>Urgent</option><option>Emergency</option></select>`,`FI('Create warranty work order for ${ow||l.a}, Lot ${n} at ${l.a}. Issue: '+V('wi${n}')+'. Desc: '+V('wd${n}')+'. Priority: '+EL2('wp${n}'))`)
       + AF(`wm${n}`,"Message subcontractor",`<label>Subcontractor</label><input id="wn${n}" placeholder="e.g. ABC Plumbing"/><label>Issue</label><textarea id="wms${n}" rows="2"></textarea>`,`FI('Draft warranty message to '+V('wn${n}')+' for Lot ${n} at ${l.a}, owner ${ow||"—"}: '+V('wms${n}'))`);
   }
 
@@ -1081,444 +1064,6 @@ var PIN_CORRECT = '1644';
 var PIN_ENTRY = '';
 var PIN_LOCKED = true;
 
-
-
-
-// ── WARRANTY WORK ORDER REPOSITORY ───────────────
-const WO_STORAGE_KEY = "schilling.oakbrook.workorders.v2";
-const WO_TRADES = ["landscaper","carpenter","handyman","electrician","drywaller","painter","framer","roofer","excavator","concrete"];
-const WO_EMPTY = {
-  id:"",
-  recordId:"",
-  sourceWorkflow:"Warranty",
-  workflow:"Work Order",
-  lot:"",
-  status:"Open",
-  photosSent:"",
-  scheduleVisit:"",
-  customerContact:"",
-  name:"",
-  telephone:"",
-  projectAddress:"",
-  email:"",
-  customerToContact:"",
-  bestContactMethod:"",
-  officeContactNotes:"",
-  visitDate:"",
-  visitTime:"",
-  followUpDate:"",
-  communicationOwner:"",
-  fieldOwner:"",
-  scopeDescriptionJobNotes:"",
-  tradesRequired:[],
-  nextAction:"",
-  neededFromCustomer:"",
-  materialsMeasurements:"",
-  internalNotes:"",
-  preparedByDatePrintedNotes:"",
-  createdAt:"",
-  updatedAt:"",
-  archivedAt:null,
-  isArchived:false
-};
-
-function WO_e(v) {
-  return String(v ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[ch]));
-}
-function WO_now() { return new Date().toISOString(); }
-function WO_id() {
-  const stamp = new Date().toISOString().replace(/[-:TZ.]/g,"").slice(0,14);
-  const rand = Math.random().toString(36).slice(2,7).toUpperCase();
-  return "WO-" + stamp + "-" + rand;
-}
-function WO_read() {
-  try {
-    const raw = localStorage.getItem(WO_STORAGE_KEY);
-    const parsed = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed : [];
-  } catch(err) {
-    console.error("Could not read work order repository.", err);
-    return [];
-  }
-}
-function WO_write(records) {
-  localStorage.setItem(WO_STORAGE_KEY, JSON.stringify(records, null, 2));
-}
-function WO_normalize(input) {
-  const next = Object.assign({}, WO_EMPTY, input || {});
-  next.lot = String(next.lot || next.lotNumber || "").replace(/^lot\s+/i,"");
-  next.sourceWorkflow = next.sourceWorkflow || "Warranty";
-  next.workflow = next.workflow || "Work Order";
-  next.status = next.status || "Open";
-  next.name = next.name || next.ownerName || next.buyerName || next.customerName || "";
-  next.customerContact = next.customerContact || next.name || "";
-  next.projectAddress = next.projectAddress || next.address || next.siteAddress || next.locationAddress || "";
-  next.telephone = next.telephone || next.phone || next.mobile || "";
-  next.email = next.email || next.emailAddress || "";
-  if (!Array.isArray(next.tradesRequired)) {
-    next.tradesRequired = String(next.tradesRequired || "").split(",").map(x => x.trim().toLowerCase()).filter(Boolean);
-  }
-  next.tradesRequired = [...new Set(next.tradesRequired.map(x => String(x).trim().toLowerCase()).filter(Boolean))];
-  if (!next.id) next.id = WO_id();
-  if (!next.recordId) next.recordId = next.id;
-  if (!next.createdAt) next.createdAt = WO_now();
-  next.updatedAt = WO_now();
-  return next;
-}
-function WO_all(includeArchived) {
-  const records = WO_read();
-  return includeArchived ? records : records.filter(r => !r.isArchived);
-}
-function WO_get(id) {
-  return WO_read().find(r => r.id === id) || null;
-}
-function WO_save(input) {
-  const records = WO_read();
-  const id = input && input.id ? input.id : "";
-  if (id) {
-    const idx = records.findIndex(r => r.id === id);
-    if (idx >= 0) {
-      const updated = WO_normalize(Object.assign({}, records[idx], input, { id: records[idx].id, createdAt: records[idx].createdAt }));
-      records[idx] = updated;
-      WO_write(records);
-      return updated;
-    }
-  }
-  const created = WO_normalize(input);
-  records.unshift(created);
-  WO_write(records);
-  return created;
-}
-function WO_archive(id) {
-  const r = WO_get(id);
-  if (!r) return null;
-  return WO_save(Object.assign({}, r, { isArchived:true, archivedAt:WO_now(), status:r.status === "Completed" ? "Completed" : "Archived" }));
-}
-function WO_restore(id) {
-  const r = WO_get(id);
-  if (!r) return null;
-  return WO_save(Object.assign({}, r, { isArchived:false, archivedAt:null, status:r.status === "Archived" ? "Open" : r.status }));
-}
-function WO_byLot(n, includeArchived) {
-  const lot = String(n);
-  return WO_all(includeArchived).filter(r => String(r.lot || "") === lot);
-}
-function WO_statusClass(status) {
-  return "wo-status-" + String(status || "open").toLowerCase().replace(/\s+/g,"-");
-}
-function WO_prefillFromLot(n) {
-  const l = INFO[n] || {};
-  const cx = CX[n] || {};
-  const owner = OWN(n);
-  return {
-    sourceWorkflow:"Warranty",
-    workflow:"Work Order",
-    lot:String(n),
-    status:"Open",
-    scheduleVisit:"Yes",
-    customerContact:owner || "",
-    name:owner || "",
-    telephone:cx.p || "",
-    projectAddress:(l.a || "") + ", Cedar Lake IN 46303",
-    email:cx.e || "",
-    customerToContact:owner || "",
-    bestContactMethod:cx.e ? "Email" : (cx.p ? "Phone" : ""),
-    officeContactNotes:"",
-    visitDate:"",
-    visitTime:"",
-    followUpDate:"",
-    communicationOwner:"",
-    fieldOwner:"",
-    scopeDescriptionJobNotes:(l.nt ? l.nt + "\n\n" : "") + "Warranty issue / work order notes:",
-    tradesRequired:[],
-    nextAction:"Assign trade and schedule/confirm visit.",
-    neededFromCustomer:"",
-    materialsMeasurements:"",
-    internalNotes:"",
-    preparedByDatePrintedNotes:"Prepared from Oak Brook GIS Warranty section."
-  };
-}
-function WO_inlineListHtml(n) {
-  const open = WO_byLot(n, false).slice(0, 4);
-  if (!open.length) return `<div class="fnote">No open local work orders for this lot.</div>`;
-  return open.map(r => `<div class="wo-mini-item">
-    <strong>${WO_e(r.recordId || r.id)} · <span class="${WO_statusClass(r.status)}">${WO_e(r.status)}</span></strong>
-    <small>${WO_e((r.tradesRequired || []).join(", ") || "No trade selected")}</small>
-    <small>${WO_e((r.scopeDescriptionJobNotes || "").slice(0, 90))}${(r.scopeDescriptionJobNotes || "").length > 90 ? "…" : ""}</small>
-  </div>`).join("");
-}
-function WO_afterChange() {
-  if (SEL && CL === "warranty") RP(SEL);
-  if (document.getElementById("workOrderRepositoryList")) WO_renderRepository();
-}
-function WO_makeModal() {
-  let modal = document.getElementById("workOrderModal");
-  if (modal) return modal;
-  modal = document.createElement("div");
-  modal.id = "workOrderModal";
-  modal.className = "wo-modal";
-  modal.innerHTML = `<div class="wo-backdrop" data-wo-close></div><div class="wo-card"><div id="workOrderModalContent"></div></div>`;
-  document.body.appendChild(modal);
-  return modal;
-}
-function WO_field(label, name, type, attrs) {
-  return `<label class="wo-field"><span>${WO_e(label)}</span><input name="${WO_e(name)}" type="${type || "text"}" ${attrs || ""}></label>`;
-}
-function WO_textarea(label, name, attrs) {
-  return `<label class="wo-field wo-field-wide"><span>${WO_e(label)}</span><textarea name="${WO_e(name)}" ${attrs || ""}></textarea></label>`;
-}
-function WO_select(label, name, options) {
-  return `<label class="wo-field"><span>${WO_e(label)}</span><select name="${WO_e(name)}">${options.map(o => `<option value="${WO_e(o)}">${WO_e(o)}</option>`).join("")}</select></label>`;
-}
-function WO_tradeBoxes() {
-  return `<fieldset class="wo-trades"><legend>Trades Required</legend><div class="wo-check-grid">
-    ${WO_TRADES.map(t => `<label><input type="checkbox" name="tradesRequired" value="${WO_e(t)}"> ${WO_e(t)}</label>`).join("")}
-  </div></fieldset>`;
-}
-function WO_formHtml(record) {
-  return `<form id="workOrderForm" class="wo-form">
-    <div class="wo-form-header">
-      <div>
-        <h2>Warranty Work Order</h2>
-        <p class="wo-print-title">Schilling Construction · Oak Brook · Cedar Lake IN</p>
-        <p>Local create/read/update/archive work order tied to the Warranty section.</p>
-      </div>
-      <div class="wo-actions">
-        <button type="button" class="wo-muted-btn" data-wo-close>Close</button>
-        <button type="button" class="wo-btn" data-wo-print>Print</button>
-        <button type="submit" class="wo-primary" data-wo-save>Save Work Order</button>
-      </div>
-    </div>
-    <section class="wo-section">
-      <h3>Record / Workflow</h3>
-      <div class="wo-grid">
-        ${WO_field("Record ID","recordId")}
-        ${WO_field("Source / Workflow","sourceWorkflow")}
-        ${WO_field("Workflow","workflow")}
-        ${WO_field("Lot","lot")}
-        ${WO_select("Status","status",["Open","Scheduled","In Progress","Waiting on Customer","Waiting on Trade","Completed","Archived"])}
-        ${WO_select("Photos Sent","photosSent",["","Yes","No"])}
-        ${WO_select("Schedule Visit","scheduleVisit",["","Yes","No"])}
-        ${WO_field("Cust. Contact","customerContact")}
-      </div>
-    </section>
-    <section class="wo-section">
-      <h3>Customer / Jobsite Contact</h3>
-      <div class="wo-grid">
-        ${WO_field("Name","name","text","required")}
-        ${WO_field("Telephone","telephone","tel")}
-        ${WO_field("Project Address","projectAddress","text","required")}
-        ${WO_field("Email","email","email")}
-        ${WO_field("Customer to Contact","customerToContact")}
-        ${WO_select("Best Contact Method","bestContactMethod",["","Phone","Text","Email","In Person"])}
-        ${WO_textarea("Office Contact Notes","officeContactNotes","rows='2'")}
-      </div>
-    </section>
-    <section class="wo-section">
-      <h3>Visit / Assignment</h3>
-      <div class="wo-grid">
-        ${WO_field("Visit Date","visitDate","date")}
-        ${WO_field("Visit Time","visitTime","time")}
-        ${WO_field("Follow-up Date","followUpDate","date")}
-        ${WO_field("Communication Owner","communicationOwner")}
-        ${WO_field("Field Owner","fieldOwner")}
-      </div>
-    </section>
-    <section class="wo-section">
-      <h3>Scope / Description / Job Notes</h3>
-      ${WO_textarea("Scope, issue, photos sent notes, punch list items, measurements, and estimating notes","scopeDescriptionJobNotes","rows='5' required")}
-      ${WO_tradeBoxes()}
-    </section>
-    <section class="wo-section">
-      <h3>Work Follow-up / Field Reference</h3>
-      <div class="wo-grid">
-        ${WO_textarea("Next Action","nextAction","rows='2'")}
-        ${WO_textarea("Needed From Customer","neededFromCustomer","rows='2'")}
-        ${WO_textarea("Materials / Measurements","materialsMeasurements","rows='2'")}
-        ${WO_textarea("Internal Notes","internalNotes","rows='2'")}
-      </div>
-    </section>
-    <section class="wo-section">
-      <h3>Print / Office Use</h3>
-      ${WO_textarea("Prepared by / date / printed notes","preparedByDatePrintedNotes","rows='2'")}
-    </section>
-    <input name="id" type="hidden">
-  </form>`;
-}
-function WO_setFormValues(form, record) {
-  const r = Object.assign({}, WO_EMPTY, record || {});
-  Object.keys(r).forEach(key => {
-    if (key === "tradesRequired") return;
-    const el = form.elements[key];
-    if (el && "value" in el) el.value = r[key] == null ? "" : r[key];
-  });
-  form.querySelectorAll("input[name='tradesRequired']").forEach(box => {
-    box.checked = (r.tradesRequired || []).includes(box.value);
-  });
-}
-function WO_val(form, name) {
-  const el = form.elements[name];
-  return el && "value" in el ? el.value.trim() : "";
-}
-function WO_collect(form) {
-  return {
-    id: WO_val(form,"id"),
-    recordId: WO_val(form,"recordId"),
-    sourceWorkflow: WO_val(form,"sourceWorkflow"),
-    workflow: WO_val(form,"workflow"),
-    lot: WO_val(form,"lot"),
-    status: WO_val(form,"status"),
-    photosSent: WO_val(form,"photosSent"),
-    scheduleVisit: WO_val(form,"scheduleVisit"),
-    customerContact: WO_val(form,"customerContact"),
-    name: WO_val(form,"name"),
-    telephone: WO_val(form,"telephone"),
-    projectAddress: WO_val(form,"projectAddress"),
-    email: WO_val(form,"email"),
-    customerToContact: WO_val(form,"customerToContact"),
-    bestContactMethod: WO_val(form,"bestContactMethod"),
-    officeContactNotes: WO_val(form,"officeContactNotes"),
-    visitDate: WO_val(form,"visitDate"),
-    visitTime: WO_val(form,"visitTime"),
-    followUpDate: WO_val(form,"followUpDate"),
-    communicationOwner: WO_val(form,"communicationOwner"),
-    fieldOwner: WO_val(form,"fieldOwner"),
-    scopeDescriptionJobNotes: WO_val(form,"scopeDescriptionJobNotes"),
-    tradesRequired: [...form.querySelectorAll("input[name='tradesRequired']:checked")].map(x => x.value),
-    nextAction: WO_val(form,"nextAction"),
-    neededFromCustomer: WO_val(form,"neededFromCustomer"),
-    materialsMeasurements: WO_val(form,"materialsMeasurements"),
-    internalNotes: WO_val(form,"internalNotes"),
-    preparedByDatePrintedNotes: WO_val(form,"preparedByDatePrintedNotes")
-  };
-}
-function WO_openFromLot(n, existingId) {
-  const modal = WO_makeModal();
-  const existing = existingId ? WO_get(existingId) : null;
-  const record = existing || WO_prefillFromLot(n);
-  document.getElementById("workOrderModalContent").innerHTML = WO_formHtml(record);
-  const form = document.getElementById("workOrderForm");
-  WO_setFormValues(form, record);
-  modal.querySelectorAll("[data-wo-close]").forEach(el => el.onclick = () => modal.classList.remove("is-open"));
-  modal.querySelector("[data-wo-print]").onclick = () => window.print();
-  form.onsubmit = e => {
-    e.preventDefault();
-    const saved = WO_save(WO_collect(form));
-    form.elements.id.value = saved.id;
-    form.elements.recordId.value = saved.recordId;
-    WO_afterChange();
-    modal.classList.remove("is-open");
-  };
-  modal.classList.add("is-open");
-}
-function WO_openRepository(preselectLot) {
-  const modal = WO_makeModal();
-  document.getElementById("workOrderModalContent").innerHTML = `<div class="wo-form">
-    <div class="wo-form-header">
-      <div>
-        <h2>Local Work Order Repository</h2>
-        <p>Stored locally in this browser. Export JSON periodically if this file will be used on multiple computers.</p>
-      </div>
-      <div class="wo-actions">
-        <button type="button" class="wo-muted-btn" data-wo-close>Close</button>
-        <button type="button" class="wo-primary" data-wo-new>New Blank</button>
-      </div>
-    </div>
-    <div class="wo-list-tools">
-      <span>
-        <input id="woSearch" placeholder="Search name, address, lot, trade, notes..." />
-        <label style="font-size:13px;color:#555;margin-left:8px"><input type="checkbox" id="woShowArchived"> Show archived</label>
-      </span>
-      <span>
-        <button type="button" class="wo-btn" data-wo-export>Export JSON</button>
-        <label class="wo-import-label">Import JSON <input type="file" id="woImport" accept=".json,application/json" hidden></label>
-      </span>
-    </div>
-    <div class="wo-repo-note">Create, read, update, archive, restore, print, export, and import. No amount column is included.</div>
-    <div id="workOrderRepositoryList"></div>
-  </div>`;
-  modal.querySelectorAll("[data-wo-close]").forEach(el => el.onclick = () => modal.classList.remove("is-open"));
-  modal.querySelector("[data-wo-new]").onclick = () => WO_openFromLot(preselectLot || SEL || "");
-  modal.querySelector("[data-wo-export]").onclick = WO_exportJson;
-  modal.querySelector("#woSearch").addEventListener("input", WO_renderRepository);
-  modal.querySelector("#woShowArchived").addEventListener("change", WO_renderRepository);
-  modal.querySelector("#woImport").addEventListener("change", WO_importJson);
-  modal.classList.add("is-open");
-  if (preselectLot) modal.querySelector("#woSearch").value = "lot " + preselectLot;
-  WO_renderRepository();
-}
-function WO_renderRepository() {
-  const list = document.getElementById("workOrderRepositoryList");
-  if (!list) return;
-  const q = (document.getElementById("woSearch")?.value || "").trim().toLowerCase();
-  const includeArchived = !!document.getElementById("woShowArchived")?.checked;
-  const rows = WO_all(includeArchived).filter(r => {
-    if (!q) return true;
-    const lotNeedle = q.match(/^lot\s+(\d+)$/);
-    if (lotNeedle) return String(r.lot || "") === lotNeedle[1];
-    const blob = [r.recordId,r.id,r.lot,r.status,r.name,r.customerContact,r.telephone,r.projectAddress,r.email,(r.tradesRequired||[]).join(" "),r.scopeDescriptionJobNotes,r.nextAction,r.internalNotes].join(" ").toLowerCase();
-    return blob.includes(q);
-  });
-  if (!rows.length) {
-    list.innerHTML = `<div class="wo-section"><p class="wo-repo-note">No matching work orders.</p></div>`;
-    return;
-  }
-  list.innerHTML = rows.map(r => `<article class="wo-row ${r.isArchived ? "archived" : ""}" data-id="${WO_e(r.id)}">
-    <div>
-      <h4>${WO_e(r.recordId || r.id)} · Lot ${WO_e(r.lot || "-")} · <span class="${WO_statusClass(r.status)}">${WO_e(r.status || "Open")}</span></h4>
-      <p><strong>${WO_e(r.name || r.customerContact || "No name")}</strong> — ${WO_e(r.projectAddress || "No address")}</p>
-      <p>Trades: ${WO_e((r.tradesRequired || []).join(", ") || "-")}</p>
-      <small>Updated ${WO_e((r.updatedAt || "").replace("T"," ").slice(0,16))}</small>
-    </div>
-    <div class="wo-row-actions">
-      <button type="button" class="wo-btn" data-wo-edit>Edit</button>
-      <button type="button" class="wo-btn" data-wo-print-row>Print</button>
-      ${r.isArchived ? `<button type="button" class="wo-primary" data-wo-restore>Restore</button>` : `<button type="button" class="wo-danger" data-wo-archive>Archive</button>`}
-    </div>
-  </article>`).join("");
-  list.querySelectorAll("[data-wo-edit]").forEach(btn => btn.onclick = () => WO_openFromLot(null, btn.closest(".wo-row").dataset.id));
-  list.querySelectorAll("[data-wo-print-row]").forEach(btn => btn.onclick = () => WO_printRecord(btn.closest(".wo-row").dataset.id));
-  list.querySelectorAll("[data-wo-archive]").forEach(btn => btn.onclick = () => { WO_archive(btn.closest(".wo-row").dataset.id); WO_afterChange(); });
-  list.querySelectorAll("[data-wo-restore]").forEach(btn => btn.onclick = () => { WO_restore(btn.closest(".wo-row").dataset.id); WO_afterChange(); });
-}
-function WO_printRecord(id) {
-  const r = WO_get(id);
-  if (!r) return;
-  WO_openFromLot(r.lot || SEL || "", id);
-  setTimeout(() => window.print(), 120);
-}
-function WO_exportJson() {
-  const data = JSON.stringify(WO_read(), null, 2);
-  const blob = new Blob([data], { type:"application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "OakBrook_WorkOrders_" + new Date().toISOString().slice(0,10) + ".json";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-async function WO_importJson(event) {
-  const file = event.target.files && event.target.files[0];
-  if (!file) return;
-  try {
-    const text = await file.text();
-    const incoming = JSON.parse(text);
-    if (!Array.isArray(incoming)) throw new Error("Import must be a JSON array.");
-    const byId = new Map(WO_read().map(r => [r.id, r]));
-    incoming.forEach(r => {
-      const normalized = WO_normalize(r);
-      byId.set(normalized.id, Object.assign({}, byId.get(normalized.id) || {}, normalized));
-    });
-    WO_write(Array.from(byId.values()).sort((a,b) => String(b.updatedAt).localeCompare(String(a.updatedAt))));
-    WO_afterChange();
-  } catch(err) {
-    alert("Could not import work orders: " + err.message);
-  } finally {
-    event.target.value = "";
-  }
-}
 
 
 // ── DOCUMENT HANDLERS ────────────────────────────
@@ -1771,30 +1316,6 @@ function pinCheck() {
 document.addEventListener('DOMContentLoaded', function() {
   var shell = document.getElementById('shell');
   if (shell) shell.style.visibility = 'hidden';
-});
-
-
-// ── FALLBACK PIN BUTTON BINDINGS ──────────────────
-document.addEventListener('DOMContentLoaded', function() {
-  try {
-    document.querySelectorAll('.pin-key').forEach(function(btn){
-      btn.addEventListener('click', function(ev){
-        ev.preventDefault();
-        const txt = (btn.textContent || '').trim();
-
-        if (btn.classList.contains('pin-del')) {
-          if (typeof PD === 'function') PD();
-          return;
-        }
-
-        if (/^\d$/.test(txt)) {
-          if (typeof PK === 'function') PK(txt);
-        }
-      }, {passive:false});
-    });
-  } catch(err) {
-    console.error('PIN binding error:', err);
-  }
 });
 
 </script>
